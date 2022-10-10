@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Form validation</title>
+</head>
+<body onload="buildTable()">
+    <div class="head1"></div>
+    <h1 class="head"><b>Form Validation</b></h1>
+    <div class="testbox">
+        <form class="form" id="form" name="form">
+
+            <div class="form-control">
+                <label class="text" for="names"><b>Name</b><span>*</span></label><br>
+                <input id="names" type="text" placeholder="Enter your Name">
+                <p style="color: red;" id="namee"></p>
+
+            </div>
+            <div class="form-control">
+                <label class="text" for="number"><b>Phone</b><span>*</span></label><br>
+                <input id="number" type="text" placeholder="Enter 10 digit Mobile number">
+                <p style="color: red;" id="numberr"></p>
+            </div>
+            <div class="form-control">
+                <label class="text" for="email"><b>Email Addres</b>s<span>*</span></label><br>
+                <input id="email" type="email" placeholder="Enter your email">
+                <p style="color: red;" id="emaill"></p>
+            </div>
+
+            <div class="form-control">
+                <lable class="text" for="Gender"><b>Gender</b><span>*</span> </lable><br>
+                <input type="radio" value="male" id="radioo" name="Gender"><span
+                    style="color: rgb(255, 255, 255);">Male</span>
+                <input type="radio" value="female" id="radioo" name="Gender"><span
+                    style="color: rgb(233, 241, 233);">Female</span>
+                <input type="radio" value="Others" id="radioo" name="Gender"><span
+                    style="color: rgb(255, 255, 255);">Others</span><br>
+                <p style="color: red;" id="radio"></p>
+            </div>
+            <div class="form-control" id="tbl">
+                <lable class="text" for="Language"><b>Select Language</b> <span>*</span></lable><br>
+                <input type="checkbox" value="Tamil" id="language" name="check" class="check"><span
+                    style="color: rgb(255, 255, 255);">Tamil</span>
+                <input type="checkbox" value="English" id="language" name="check" class="check"><span
+                    style="color: rgb(255, 255, 255);">English</span>
+                <input type="checkbox" value="Hindi" id="language" name="check" class="check"><span
+                    style="color: rgb(255, 255, 255);">Hindi</span>
+                <input type="checkbox" value="Others" id="language" name="check" class="check"><span
+                    style="color: rgb(255, 255, 255);">Others</span>
+                <p style="color: red;" id="Language"></p>
+            </div>
+            <div class="form-control" id="sta">
+                <p class="text"><b>Status<span>*</span></b></p>
+                <select id="status" name="status">
+                    <option value="">Select status</option>
+                    <option value="Active">Active</option>
+                    <option value="Inactive">Inactive</option>
+                </select>
+                <p style="color: red;" id="statusId"></p>
+            </div>
+            <div class="form-control">
+                <lable class="text" for="Address"><b>Address</b> <span>*</span></lable><br>
+                <textarea id="textarea" rows="2" column="50"></textarea><br>
+                <p style="color: red;" id="textar"></p>
+            </div>
+            <div>
+                <button type="submit" class="button">SUBMIT</button>
+                <button class="button1" type="button" onclick="myfunction()">RESET</button>
+            </div>
+        </form>
+    </div>
+    <div>
+        <div class="im1"><img src="re-removebg-preview.png" width="500px"></div>
+        <h1 class="det">DETAILS</h1><br><br>
+    </div>
+    <table id="show">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Phone Number</th>
+                <th>Email</th>
+                <th>Status</th>
+                <th>Gender</th>
+                <th>Language</th>
+                <th>Address</th>
+            </tr>
+        </thead>
+        <tbody id="myTable"></tbody>
+    </table>
+    <br>
+    <script src="index.js"></script>
+</body>
+
+</html>
